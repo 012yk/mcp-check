@@ -6,6 +6,17 @@ As AI agents become more capable, they rely on MCP servers to interact with the 
 
 `mcp-check` is a CLI tool designed to audit your MCP configurations before deploying them to production.
 
+## 🎯 Why another MCP scanner?
+
+There are already great security tools out there. But `mcp-check` is built for a different philosophy: **Audit the source in 60 seconds.**
+
+- **Zero-Dependency:** Only uses Python's built-in standard library. No `pip install` nightmares.
+- **Single-File:** The entire logic is in `scan.py`. You can read every line of code in 1 minute to verify it's safe to run.
+- **White-Box Control:** Doesn't hide behind a "black box" AI magic. You know exactly what rules are being checked.
+
+If you just need a quick, transparent check before deploying your MCP configs, this is for you.
+
+---
 ## ✨ Features (Current MVP)
 
 - **🔍 Secret Detection:** Automatically scans `env` variables for hardcoded secrets (e.g., `TOKEN`, `API_KEY`, `SECRET`) that should be managed via a secure vault.
